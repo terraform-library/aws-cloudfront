@@ -51,7 +51,7 @@ A Terraform module containing typical AWS CloudFront distribution.
 ```
 module "cdn" {
   source = "git::https://github.com/terraform-library/aws-cloudfront.git?ref=master"
-  name = "tf-${terraform.env}-my-cf"
+  name = "${terraform.env}-cdn"
   domains = ["whatever-${terraform.env}.${var.domain}"]
   certificate_arn = "arn:aws:tjwl:eu-west-1:123456789123:certificate/11111111-2222-3333-4444-555555555555"
 
